@@ -12,6 +12,14 @@ window.addEventListener('DOMContentLoaded', () => {
     replaceText(`${type}-version`, process.versions[type])
   }
 
+  ipcRenderer.on('message', function(event, text) {
+    console.log('received a message!', text)
+    var container = document.getElementById('messages');
+    var message = document.createElement('div');
+    message.innerHTML = text;
+    container.appendChild(message);
+  })
+
   const version = ipcRenderer.sendSync('get-version')
   console.log('v', version)
   replaceText('package-version', version)

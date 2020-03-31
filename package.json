@@ -4,11 +4,17 @@
   "main": "main.js",
   "scripts": {
     "dev": "electron .",
-    "start": "electron ."
+    "start": "electron .",
+    "release": "build -p always"
   },
   "devDependencies": {
     "electron": "^8.1.1",
     "electron-builder": "^22.4.1",
     "electron-updater": "^4.2.5"
+  },
+  "build": {
+    "win": {
+      "publish": ["github"]
+    }
   }
 }
