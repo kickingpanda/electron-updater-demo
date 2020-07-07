@@ -8,7 +8,7 @@
     "release": "build -p always"
   },
   "devDependencies": {
-    "electron": "^8.1.1",
+    "electron": "^8.2.4",
     "electron-builder": "^22.4.1",
     "electron-updater": "^4.2.5"
   },
